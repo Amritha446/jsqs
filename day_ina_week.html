@@ -1,0 +1,51 @@
+<html lang="en">
+	<head>
+		
+	</head>
+	<body>
+		<form>	
+			<label for="choice">select</label>
+			<input type="number" id="choice" required>
+
+			<button type="button" onClick="calculator()">Check</button>
+			<p >Result : <span id="result1"></span></p>
+			
+		</form>
+		<script>
+			 
+			function calculator(){
+				let x=document.getElementById('choice').value;
+				console.log(x);
+				if(0>x<=7){
+					if(x==1){
+						result='Sunday';
+					}
+					if(x==2){
+						result='Monday';
+					}
+					if(x==3){
+						result='Tuesday';
+					}
+					if(x==4){
+						result='Wednesday';
+					}
+					if(x==5){
+						result='Thursday';
+					}
+					if(x==6){
+						result='Friday';
+					}
+					if(x==7){
+						result='Saturday';
+					}
+				}
+				else{
+					result='invalid operation';
+				}
+				document.getElementById('result1').textContent=result;
+				
+				
+			}
+		</script>
+	</body>
+</html>

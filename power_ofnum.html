@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		
+	</head>
+	<body>
+		<form>
+			<label for="num">Enter the number</label>
+			<input type="text" id="num">
+			<label for="pow">Enter the powers</label>
+			<input type="text" id="pow">
+			<button type="button" onClick="power()">Check</button>
+			<p >result : <span id="result1"></span></p>
+		</form>
+		<script>
+			function power(){
+				let x=document.getElementById('num').value;
+				let y=document.getElementById('pow').value;
+				result=Math.pow(x,y);
+				document.getElementById('result1').textContent=result;
+			}
+		</script>
+	</body>
+</html>

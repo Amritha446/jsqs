@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		
+	</head>
+	<body>
+		<form>
+			<label for="num">Enter the number</label>
+			<input type="number" id="num">
+			
+			<button type="button" onClick="sumofdigit()">Check</button>
+			<p >result : <span id="result1"></span></p>
+		</form>
+		<script>
+			function sumofdigit(){
+				let x=document.getElementById('num').value;
+				
+				let sum=0;
+				while(x>0){
+					let num=parseInt(x%10);
+					x=parseInt(x/10);
+					sum+=num;
+				}
+				console.log(sum);
+				result=parseInt(sum);
+				document.getElementById('result1').textContent=result;
+				
+			}
+		</script>
+	</body>
+</html>

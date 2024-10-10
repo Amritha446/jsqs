@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+	<head>
+	</head>
+	<body>
+		<form>
+			<label for="amount">Principal amount</label>
+			<input type="number" id="amount1" required>
+
+			<label for="rate">rate</label>
+			<input type="number" id="rate1" required>
+
+			<label for="year">year</label>
+			<input type="number" id="year1" required>
+			<button type="button" onClick="compound()">submit</button>
+
+			<p id="total">Total:<span id="totalAmount">.0</span></p>
+		</form>
+		<script>
+			function compound(){
+				
+				const totalamount=document.getElementById('totalAmount');
+				const pamount=document.getElementById('amount1');
+				const rate=document.getElementById('rate1');
+				const year=document.getElementById('year1');
+
+				let p=Number(pamount.value);	
+				let r=Number(rate.value/100);
+				let y=Number(year.value);
+				const result=p*(1+r)**y;	
+				document.getElementById('totalAmount').textContent=result;	
+			}
+			
+		</script>
+	</body>
+</html>

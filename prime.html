@@ -1,0 +1,37 @@
+<html lang="en">
+	<head>
+		
+	</head>
+	<body>
+		<form>
+			<label for="num1">Enter the number</label>
+			<input type="number" id="num">
+			
+			<button type="button" onClick="prime()">Check</button>
+			<p >number is : <span id="result"></span></p>
+			
+		</form>
+		<script>
+			function prime(){
+				let x=document.getElementById('num').value; 
+				let count=0;
+				for (let i=1;i<=x;i++){
+					if(x%i==0){
+						count++;
+						console.log(count);
+					}
+					if(count==2){
+						result='prime';
+					}
+					else{
+						result='not prime';
+					}
+					
+				}
+				document.getElementById('result').textContent=result;
+				
+				
+			}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		
+	</head>
+	<body>
+		<form>
+			<label for="year">Enter the year to be checked</label>
+			<input type="text" id="yr">
+			<button type="button" onClick="leap()">Check</button>
+			<p ><span id="result"></span></p>
+		</form>
+		<script>
+			function leap(){
+				let y=document.getElementById('yr').value;
+				if(y%4==0){
+					result1='leap year';
+				}
+				else{
+					result1='not a leap year';
+				}
+				document.getElementById('result').textContent=result1;
+			}
+		</script>
+	</body>
+</html>

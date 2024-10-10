@@ -1,0 +1,23 @@
+<html lang="en">
+	<head>
+		
+	</head>
+	<body>
+		<form>	
+			<button type="button" onClick="calculator()">print</button>
+			<p >Result : <span id="result"></span></p>
+			
+		</form>
+		<script>
+			function calculator(i){
+				if(i<=100){
+					console.log(i+" ");
+					i=i+1;
+					calculator(i);
+				}
+			}
+			let i=1;
+			calculator(i);
+		</script>
+	</body>
+</html>
