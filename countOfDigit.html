@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		
+	</head>
+	<body>
+		<form>
+			<label for="num">Enter the number:</label>
+			<input type="text" id="num">
+			
+			<button type="button" onClick="count()">Check count</button>
+			<p >Count of digits : <span id="result1"></span></p>
+		</form>
+		<script>
+			function count(){
+				let x=document.getElementById('num').value;
+				let count=0;
+				
+				while(x!=0){
+					let y=x%10;
+					count++;
+					x=Math.floor(x/10);
+				}
+				
+				document.getElementById('result1').textContent=count;
+				
+			}
+		</script>
+	</body>
+</html>

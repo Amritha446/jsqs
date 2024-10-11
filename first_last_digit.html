@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		
+	</head>
+	<body>
+		<form>
+			<label for="num">Enter the number</label>
+			<input type="text" id="num">
+			
+			<button type="button" onClick="reverse()">Check</button>
+			<p >first digit : <span id="result_f"></span></p>
+			<p >last digit : <span id="result_l"></span></p>
+		</form>
+		<script>
+			function reverse(){
+				let x=document.getElementById('num').value;
+				let num=x.toString();
+				let a=0;
+				for(let i=0;i<=num.length-1;i++){
+					a +=num[i];
+				}
+				result1=parseInt(num[0]);
+				document.getElementById('result_f').textContent=result1;
+				result2=parseInt(num[num.length-1]);
+				document.getElementById('result_l').textContent=result2;
+			}
+		</script>
+	</body>
+</html>

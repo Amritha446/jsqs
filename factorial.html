@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		
+	</head>
+	<body>
+		<form>
+			<label for="num">Enter the number</label>
+			<input type="number" id="N1">
+			
+			<button type="button" onClick="factorial()">Check</button>
+			<p id="p"><span id="result"></span></p>
+		</form>
+		<script>
+                        
+			function factorial(){
+                                var x=document.getElementById('result');
+				let N=document.getElementById('N1').value;
+				let fact=1;
+				for (let i=1;i<=N;i++){                                         
+					fact=fact*i;					
+				}
+				console.log(fact);
+				document.getElementById('result').textContent=fact;
+			}
+		</script>
+	</body>
+</html>
