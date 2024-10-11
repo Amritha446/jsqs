@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		
+	</head>
+	<body>
+		<form>
+			<label for="num">Enter the number</label>
+			<input type="number" id="N1">
+			
+			<button type="button" onClick="numbers()">Check</button>
+			<p>sum:<span id="result1"></span></p>
+			<p>Average:<span id="result2"></span></p>
+		</form>
+		<script>
+			function numbers(){
+				let N=document.getElementById('N1').value;
+				let sum=0;
+				let avg=0;
+				for (let i=1;i<=N;i++){
+					sum=sum+i;
+					result_s=sum;
+					avg=sum/N;
+					result_a=avg;
+				}
+				document.getElementById('result1').textContent=result_s;
+				document.getElementById('result2').textContent=result_a;
+			}
+		</script>
+	</body>
+</html>

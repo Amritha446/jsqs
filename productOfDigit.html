@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		
+	</head>
+	<body>
+		<form>
+			<label for="num">Enter the number:</label>
+			<input type="text" id="num">
+			
+			<button type="button" onClick="product()">Check</button>
+			<p >result : <span id="result1"></span></p>
+		</form>
+		<script>
+			function product(){
+				let x=document.getElementById('num').value;
+				let product=1;
+				
+				while(x!=0){
+					let y=x%10;
+					product=product*y;
+					x=Math.floor(x/10);
+				}
+				console.log(product);
+				document.getElementById('result1').textContent=product;
+				
+			}
+		</script>
+	</body>
+</html>

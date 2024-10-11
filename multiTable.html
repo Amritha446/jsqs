@@ -8,25 +8,24 @@
 			<input type="number" id="choice" required>
 
 			<button type="button" onClick="table()">Check</button>
-			<p >Result : <span id="result1"></span></p>
 			
+			<ul id="ulId"></ul>
 		</form>
 		<script>
 			 
 			function table(){
 				let x=document.getElementById('choice').value;
-				
-				if(x>0){
+				let ulId=document.getElementById('ulId');
 					for (let i=1;i<=10;i++){
+					var display=document.createElement('span');	
 					result=i*x;
-					console.log(x);
-					document.getElementById('result1').textContent=result;
+					console.log(`${i}*${x}=${result}`);
+					display.textContent=(`${i}*${x}=${result}`);
+                                        	ulId.appendChild(display);
+                                       		display=document.createElement('br');
+                                        	ulId.appendChild(display);
 					}
 					
-				}
-				
-				
-				
 			}
 		</script>
 	</body>

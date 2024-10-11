@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		
+	</head>
+	<body>
+		<form>
+			<label for="num">Enter the number</label>
+			<input type="number" id="N1">
+			
+			<button type="button" onClick="factor()">Check</button>
+                        <ul id="ulId"></ul>		
+		</form>
+		<script>
+			function factor(){
+				let N=document.getElementById('N1').value;
+				let ulId=document.getElementById('ulId');
+				for (let i=1;i<=N;i++){
+                                        var display=document.createElement('span');
+					if(N%i==0){
+					    display.textContent=i;
+                                            ulId.appendChild(display);
+                                            display=document.createElement('br');
+                                            ulId.appendChild(display);
+					}
+				}
+			}
+		</script>
+	</body>
+</html>

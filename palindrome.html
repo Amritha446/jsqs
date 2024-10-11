@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		
+	</head>
+	<body>
+		<form>
+			<label for="num">Enter the number</label>
+			<input type="text" id="num">
+			
+			<button type="button" onClick="reverse()">Check</button>
+			<p >result : <span id="result1"></span></p>
+		</form>
+		<script>
+			function reverse(){
+				let x=document.getElementById('num').value;
+				let num=x.toString();
+				let rev=' ';
+				for(let i=num.length-1;i>=0;i--){
+					rev +=num[i];
+					if(parseInt(rev)==x){
+						result='palindrome';
+					}
+					else{
+						result='not a palindrome';
+					}
+				document.getElementById('result1').textContent=result;
+				}
+			}
+		</script>
+	</body>
+</html>

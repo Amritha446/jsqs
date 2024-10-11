@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		
+	</head>
+	<body>
+		<form>
+			<label for="unit">Enter the unit</label>
+			<input type="number" id="unit">
+			
+			<button type="button" onClick="electricity_bill()">Check amount</button>
+			<p><span id="result1"></span></p>
+		</form>
+		<script>
+			function electricity_bill(){
+				let Unit=document.getElementById('unit').value;
+				
+				if(Unit<=200){
+					let x=Unit-100;
+					let y=Unit-50;
+					
+					if(Unit<=50){
+						result=Unit*2.60;
+					}
+					else if(50<unit<=100){
+						result=(y*3.25)+(50*2.60);
+					}
+					else if(100<unit<=200){
+						result=(x*5.65)+(50*3.25)+(50*2.60);
+					}
+					document.getElementById('result1').textContent=result;
+				}
+				else if(200<Unit<=700){
+					result=Unit*7.25;
+				}
+
+				if(Unit>700){
+					result=((Unit*7.25)+(0.5*(Unit*7.25)));
+				}
+				document.getElementById('result1').textContent=result;
+			}
+		</script>
+	</body>
+</html>
