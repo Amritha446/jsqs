@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		
+	</head>
+	<body>
+		<form>
+			<label for="string">Enter the first string:</label>
+			<input type="text" id="string1">
+			<label for="string">Enter the second string:</label>
+			<input type="text" id="string2">
+			<button type="button" onClick="concatinate()">Check</button>
+			<p >result : <span id="result1"></span></p>
+		</form>
+		<script>
+			function concatinate(){
+				let x=document.getElementById('string1').value;
+				let y=document.getElementById('string2').value;
+				result=x.concat(y);
+				document.getElementById('result1').textContent=result;
+				
+			}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		
+	</head>
+	<body>
+		<form>
+			<label for="string">Enter the string:</label>
+			<input type="text" id="string">
+
+			<label for="string">Enter the character to be counted:</label>
+			<input type="text" id="string1">
+			<button type="button" onClick="string_index()">Check</button>
+			<p><span id="result"></span></p>
+		</form>
+		<script>
+			function string_index(){
+				let x=document.getElementById('string').value;
+				let y=document.getElementById('string1').value;
+				let count=[];
+				for (let i=0;i<=x.length;i++){
+					if(x[i]==y){
+						count.push(i+1);
+					}
+				}
+				document.getElementById('result').textContent=count;
+				console.log(count);
+			}
+		</script>
+	</body>
+</html>

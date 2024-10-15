@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		
+	</head>
+	<body>
+		<form>
+			<label for="string">Enter the string:</label>
+			<input type="text" id="string">
+			
+			<button type="button" onClick="count_string()">Check count</button>
+			<p >Count of characters : <span id="result1"></span></p>
+		</form>
+		<script>
+			function count_string(){
+				let x=document.getElementById('string').value;
+				let count=0;
+				for (let i=0;i<=x.length-1;i++){
+					if(x.charAt[i]!=" "){
+					count=count+1;
+					}
+				console.log(count);
+				document.getElementById('result1').textContent=count;
+				}
+			}
+		</script>
+	</body>
+</html>

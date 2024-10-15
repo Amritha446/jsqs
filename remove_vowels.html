@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		
+	</head>
+	<body>
+		<form>
+			<label for="string">Enter the string:</label>
+			<input type="text" id="string">
+
+			<button type="button" onClick="replace()">Check</button>
+			<p><span id="result"></span></p>
+			
+		</form>
+		<script>
+			function replace(){
+				let x=document.getElementById('string').value;
+				let count=0;
+				let b=[];
+				let str=" ";
+				for (let i=0;i<=x.length-1;i++){
+					if(x.charAt(i)=='a'||x.charAt(i)=='e'||x.charAt(i)=='i'||x.charAt(i)=='o'||x.charAt(i)=='u'){
+						b.push(x.charAt(i));
+						str+=x[i];
+					}
+					
+					document.getElementById('result').textContent='string:'+b+str;
+					
+				}
+				
+			}
+		</script>
+	</body>
+</html>

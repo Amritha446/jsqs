@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		
+	</head>
+	<body>
+		<form>
+			<label for="string">Enter the string:</label>
+			<input type="text" id="string">
+			
+			<button type="button" onClick="string_char()">Check</button>
+			<ul id="ulId"></ul>
+		</form>
+		<script>
+			function string_char(){
+				let x=document.getElementById('string').value;
+				let ulId=document.getElementById('ulId');
+				for(let i=0;i<=x.length-1;i++){
+					var display=document.createElement('span')
+					result=x.charAt(i);
+					console.log(result);
+					display.textContent='character at '+i+" ="+x.charAt(i);
+                                       	ulId.appendChild(display);
+                                       	display=document.createElement('br');
+                                        ulId.appendChild(display);
+				}
+			}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		
+	</head>
+	<body>
+		<form>
+			<label for="string">Enter the string:</label>
+			<input type="text" id="string">
+
+			<button type="button" onClick="count()">Check</button>
+			<p><span id="result"></span></p>
+			<p><span id="result1"></span></p>
+			<p><span id="result2"></span></p>
+		</form>
+		<script>
+			function count(){
+				let x=document.getElementById('string').value;
+				const ch=x.split('');
+				let count=0,countt=0,counttt=0;
+				for(let i=0;i<=ch.length-1;i++){
+					//if((x.CharAt[i]>='A' && x.CharAt[i]<='Z')||(x.CharAt[i]>='a' && x.CharAt[i]<='z')){
+					if(/[a-zA-Z]/.test(x[i])){
+						count++;
+						console.log(count);
+					}
+					else if(x.charAt(i)>=0 && x.charAt(i)<=9){
+						countt++;
+					}
+					else{
+						counttt++;
+					}
+					
+				}
+				document.getElementById('result').textContent='count of alphabets:'+count;
+					document.getElementById('result1').textContent='count of numbers:'+countt;
+					document.getElementById('result2').textContent='count of numbers:'+counttt;
+				
+			}
+		</script>
+	</body>
+</html>

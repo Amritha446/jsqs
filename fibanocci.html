@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		
+	</head>
+	<body>
+		<form>
+			<label for="num">Enter the number of terms:</label>
+			<input type="text" id="num">
+			
+			<button type="button" onClick="fibanocci()">Check</button>
+			<p >result : <span id="result1"></span></p>
+		</form>
+		<script>
+			function fibanocci(){
+				let x=document.getElementById('num').value;
+				let n1=0;
+				let n2=1;
+				let next;
+				for(let i=1;i<=x;i++){
+					console.log(n1);
+					next=n1+n2;
+					n1=n2;
+					n2=next;
+				document.getElementById('result1').textContent=n1;
+				}
+			}
+		</script>
+	</body>
+</html>

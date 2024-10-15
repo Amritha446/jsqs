@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		
+	</head>
+	<body>
+		<form>
+			<label for="string">Enter the string:</label>
+			<input type="text" id="string">
+			
+			<button type="button" onClick="middle_char()">Check</button>
+			<p >middle character of the string: <span id="result1"></span></p>
+		</form>
+		<script>
+			function middle_char(){
+				let x=document.getElementById('string').value;
+				
+				for(let i=x.length-1;i>=0;i--){
+					if(x.length%2==0){
+						document.getElementById('result1').textContent='dont have perfect mid point';
+					}
+					else{
+						result=x[(x.length-1)/2];
+						document.getElementById('result1').textContent=result;
+					}
+				
+				}
+			}
+		</script>
+	</body>
+</html>

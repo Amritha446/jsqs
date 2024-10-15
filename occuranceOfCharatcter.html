@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		
+	</head>
+	<body>
+		<form>
+			<label for="string">Enter the string:</label>
+			<input type="text" id="string">
+
+			<label for="string">Enter the character to be counted:</label>
+			<input type="text" id="string1">
+			<button type="button" onClick="string_char()">Check</button>
+			<ul id="ulId"> </ul>
+		</form>
+		<script>
+			function string_char(){
+				let x=document.getElementById('string').value;
+				let y=document.getElementById('string1').value;
+				let ulId=document.getElementById('ulId');
+				let count=0;
+				let length=x.length;
+				for (let i=0;i<length;i++){
+					if(x[i]==y){
+						count++;	
+					}
+				}
+				var display=document.createElement('span');	
+				display.textContent=(`count of ${y}=${count}`);
+                                ulId.appendChild(display);
+                                display=document.createElement('br');
+                                ulId.appendChild(display);
+				console.log(`${y}=${count}`);
+			}
+		</script>
+	</body>
+</html>

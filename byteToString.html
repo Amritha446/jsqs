@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		
+	</head>
+	<body>
+		<form>
+			<label for="number">converting byte to string: </label>
+			
+			
+			<button type="button" onClick="byte_to_string()">Check</button>
+			<p >result : <span id="result1"></span></p>
+		</form>
+		<script>
+			function byte_to_string(){
+				let x[]={72, 101, 108, 108, 111, 32, 87, 111, 114, 108, 100};
+				
+				for (let i=0;i<x.length();i++){
+					let string=x.toString();
+					document.getElementById('result1').textContent=string;
+				}
+			}
+		</script>
+	</body>
+</html>

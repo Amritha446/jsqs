@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		
+	</head>
+	<body>
+		<form>
+			<label for="string">Enter the first string:</label>
+			<input type="text" id="string">
+			
+			<button type="button" onClick="ascii()">Check</button>
+			<ul id="ulId"></ul>
+		</form>
+		<script>
+			function ascii(){
+				
+				let x=document.getElementById('string').value;
+				let ulId=document.getElementById('ulId');
+					
+				for (let i=0;i<x.length;i++){
+					var display=document.createElement('span');
+					result=x.charAt(i)+":"+x.charCodeAt(i);
+					display.textContent=result;
+                                        ulId.appendChild(display);
+                                        display=document.createElement('br');
+                                        ulId.appendChild(display);
+					
+				}
+			}
+		</script>
+	</body>
+</html>

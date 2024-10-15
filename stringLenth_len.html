@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		
+	</head>
+	<body>
+		<form>
+			<label for="string">Enter the string:</label>
+			<input type="text" id="string">
+			
+			<button type="button" onClick="str_len()">Check</button>
+			<p ><span id="result1"></span></p>
+		</form>
+		<script>
+			function str_len(){
+				let x=document.getElementById('string').value;
+				result=x.length;
+				document.getElementById('result1').textContent="length of entered string ="+result;
+				}
+			
+		</script>
+	</body>
+</html>

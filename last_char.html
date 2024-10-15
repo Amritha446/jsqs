@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		
+	</head>
+	<body>
+		<form>
+			<label for="string">Enter the string:</label>
+			<input type="text" id="string">
+			
+			<button type="button" onClick="last_char()">Check</button>
+			<p >Last character of the string: : <span id="result1"></span></p>
+		</form>
+		<script>
+			function last_char(){
+				let x=document.getElementById('string').value;
+				
+				for(let i=x.length-1;i>=0;i--){
+					result=x[x.length-1];
+				document.getElementById('result1').textContent=result;
+				}
+			}
+		</script>
+	</body>
+</html>

@@ -31,11 +31,11 @@
 					document.getElementById('result1').textContent=result;
 				}
 				else if(200<Unit<=700){
-					result=Unit*7.25;
+					result=((Unit-200)*7.25)+857.5;
 				}
 
-				if(Unit>700){
-					result=((Unit*7.25)+(0.5*(Unit*7.25)));
+				else if(Unit>700){
+					result=(((Unit-200)*7.25)+857.5)+(0.5*(((Unit-200)*7.25)+857.5));
 				}
 				document.getElementById('result1').textContent=result;
 			}

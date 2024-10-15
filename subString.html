@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		
+	</head>
+	<body>
+		<form>
+			<label for="string">Enter the string:</label>
+			<input type="text" id="string">
+
+			<label for="string">Enter the character to be counted:</label>
+			<input type="text" id="string1">
+			<button type="button" onClick="string_index()">Check</button>
+			<p><span id="result"></span></p>
+
+			<p><span id="resultt"></span></p>
+		</form>
+		<script>
+			function string_index(){
+				let x=document.getElementById('string').value;
+				let y=document.getElementById('string1').value;
+
+				let a=[];
+				a.push(x.split(" "));
+
+				if(x.includes(y)==true){
+					result1='substring';
+				}
+				else{
+					result1='not substring';
+				}
+				document.getElementById('result').textContent=result1;
+				/* split method
+				for(let i=0;i<a.length-1;i++){
+                                        console.log(a[i]);
+					if(a[i]==y){
+						result2='yes';
+					}
+					else{
+						result2='nop';
+					}	
+				}
+				document.getElementById('resultt').textContent=result2;*/
+			}
+		</script>
+	</body>
+</html>

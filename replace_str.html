@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		
+	</head>
+	<body>
+		<form>
+			<label for="string">Enter the string:</label>
+			<input type="text" id="string">
+
+			<label for="string">Enter the character to be counted:</label>
+			<input type="text" id="string1">
+			<button type="button" onClick="replace()">Check</button>
+			<p><span id="result"></span></p>
+		</form>
+		<script>
+			function replace(){
+				let x=document.getElementById('string').value;
+				let y=document.getElementById('string1').value;
+				
+				final=x.replace(x,y);
+				document.getElementById('result').textContent='replaced string is'+" "+ final;
+			}
+		</script>
+	</body>
+</html>
