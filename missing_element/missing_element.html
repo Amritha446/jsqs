@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		
+	</head>
+	<body>
+		<form>
+			<label for="string">Enter the string:</label>
+			<input type="text" id="string">
+
+			<button type="button" onClick="replace()">Check</button>
+			<p><span id="result"></span></p>
+		</form>
+		<script>
+			function replace(){
+				let x=document.getElementById('string').value;
+				let start=x.charCodeAt(0)+1;
+				let missing=' ';
+				console.log(x.length);
+				for(let i=1;i<x.length;i++){
+					if(x.charCodeAt(i)!==start){
+						missing+=String.fromCharCode(start);
+						i--;
+					}
+					start++;
+					console.log(missing);
+				}
+				document.getElementById('result').textContent=missing;
+			}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		
+	</head>
+	<body>
+		<form>
+			<label for="num">Enter the number:</label>
+			<input type="number" id="num">
+			
+			<button type="button" onClick="count()">Check count</button>
+			<p ><span id="result1"></span></p>
+			<p ><span id="result2"></span></p>
+			<p ><span id="result3"></span></p>
+			<p ><span id="result4"></span></p>
+			<p ><span id="result5"></span></p>
+		</form>
+		<script>
+			function count(){
+				let x=document.getElementById('num').value;
+					let p=Math.floor(x/500);
+					console.log(p);
+					let a=x-(p*500);
+					document.getElementById('result1').textContent='number of 500 notes :'+ p;
+
+					let q=Math.floor(a/200);
+					console.log(q);
+					let b=a-(q*200);
+					document.getElementById('result2').textContent='number of 200 notes :'+ q;
+					let r=Math.floor(b/100);
+					console.log(r);
+					let c=b-(r*100);
+					document.getElementById('result3').textContent='number of 100 notes :'+ r;
+					let s=Math.floor(c/50);
+					console.log(s);
+					let d=c-(s*50);
+					document.getElementById('result4').textContent='number of 50 notes :'+ s;
+					let t=Math.floor(d/10);
+					console.log(t);
+					let e=d-(t*10);
+					document.getElementById('result5').textContent='number of 10 notes :'+ t;
+			}
+		</script>
+	</body>
+</html>

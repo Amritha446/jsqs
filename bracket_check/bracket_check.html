@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		
+	</head>
+	<body>
+		<form>
+			<label for="string">Enter the string:</label>
+			<input type="text" id="string">
+
+			<button type="button" onClick="replace()">Check</button>
+			<p><span id="result"></span></p>
+		</form>
+		<script>
+			function replace(){
+				let x=document.getElementById('string').value;
+				let str=[];
+				for(let i=0;i<x.length;i++){
+					if(x[i]=='{'){
+						str.push('}');
+						
+					}
+					else if(x[i]=='['){
+						str.push(']');
+						console.log(str);
+					}
+					else if(x[i]=='('){
+						str.push(')');
+						console.log(str);
+					}
+					else if(str.pop()!==x[i]){
+						return false;
+					}
+				console.log(str);
+				if(str.length==0){
+					document.getElementById('result').textContent='balanced';
+				}
+				else{
+					document.getElementById('result').textContent='not balanced';
+				}
+				}
+				
+			}
+
+		</script>
+	</body>
+</html>

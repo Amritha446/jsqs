@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		
+	</head>
+	<body>
+		<form>
+			<label for="string">Enter the string:</label>
+			<input type="text" id="string">
+
+			<button type="button" onClick="replace()">Check</button>
+			<p ><span id="result"></span></p>
+			<p ><span id="result1"></span></p>
+		</form>
+		<script>
+			function replace(){
+				let x=document.getElementById('string').value;
+				let a=x.split(' ');
+				console.log(a);
+				let small=a[0];
+				let large=a[0];
+				for (let i=1;i<a.length;i++){
+					let word=a[i];
+					if(word.length<small.length){
+						small=word;
+					}
+					if(word.length>large.length){
+						large=word;
+					}
+					document.getElementById('result').textContent='smallest word is'+' :'+small;
+					document.getElementById('result1').textContent='largest word is'+' :'+large;
+				}
+				
+			}
+		</script>
+	</body>
+</html>

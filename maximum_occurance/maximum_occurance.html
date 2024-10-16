@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		
+	</head>
+	<body>
+		<form>
+			<label for="string">Enter the string:</label>
+			<input type="text" id="string">
+
+			
+			<button type="button" onClick="string_char()">Check</button>
+			<p ><span id="result"></span></p>
+		</form>
+		<script>
+			function string_char(){
+				let x=document.getElementById('string').value;
+				let map=new Map();
+				let ans;
+				let count=0;
+				for(let i=0;i<x.length;i++){
+					map.set(x[i],(map.get(x[i]) || 0)+1);
+					if(count<map.get(x[i])){
+						ans=x[i];
+						count=map.get(x[i]);
+						console.log(ans+x[i]);
+						result1=count;
+					}
+					document.getElementById('result').textContent=result1+' '+ans;
+				}
+				return ans;
+				console.log(ans);
+			}
+		</script>
+	</body>
+</html>
